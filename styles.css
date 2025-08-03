@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(12, 12, 12), rgb(39, 37, 37));
+}
+
+#container {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#title {
+  text-align: center;
+  color: white;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 20px;
+}
+
+#todoForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#todoInput {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#todoForm button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+#todoForm button:hover {
+  background-color: #218838;
+}
+
+#todoList {
+  padding: 0;
+}
+
+#todoList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+#todoText {
+  color: white;
+  font-size: 18px;
+}
+
+#todoList li button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: white;
+  cursor: pointer;
+}
+
+#todoList li button:hover {
+  background-color: #c82333;
+}
+
+#todoList li .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+
+/* Small tablets (≤768px) */
+@media (max-width: 768px) {
+    #container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    #todoInput {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    #todoForm button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    #todoList li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #todoList li .buttons {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #todoList li button {
+        width: 30%;
+    }
+}
+
+/* Phones (≤480px) */
+@media (max-width: 480px) {
+    #container {
+        width: 95%;
+    }
+
+    #todoInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #todoForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #todoForm button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #todoList li button {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    #title {
+        font-size: 24px;
+    }
+}
